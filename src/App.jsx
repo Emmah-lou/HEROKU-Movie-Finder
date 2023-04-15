@@ -3,16 +3,16 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import About from "./components/About";
+import Movie from "./components/About";
+import NotFound from "./components/Home";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/movie/:id" element={<Movie />} />
+      <Route path="404" element={<NotFound />} />
     </Routes>
   );
 }
